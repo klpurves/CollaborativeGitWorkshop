@@ -1,0 +1,63 @@
+---
+title: "Collaborative working in git"
+author: "K Purves"
+date: 16.07.2020
+
+output: rmdformats::material
+---
+
+# Introduction
+
+This is an r notebook that goes along with a short workshop to get you working confidently and collaboratively using GitHub and local git repositories to ensure 1) version control and 2) regular code review.
+
+You'll notice that this notebook has started off pretty empty and unimpressive. By the end of the workshop, we should have a nice completed project that we have built as a team, and we can confidently deploy in public. 
+
+# Aims
+
+By the end of the session, I hope that everyone in the room will have a github account, and some experience cloning existing repositories and working on documents collaboratively. 
+
+## 1. Clone a project repository and link it with a remote
+
+You should have started the workshop by cloning the remote (i.e. hosted on GitHub) repository that contains this code, and setting it up as a local git (i.e. saved on your personal machine or workspace).
+
+Given cloning a repository initialises the folder as a git on your local machine,if you're reading this, you've already achieved aim 1. Congratulations. I hope that this fills you with determination. 
+
+# Task 1 
+
+## Objectives 
+
+1. Learn how to read data in to r studio in a way that doesn't reveal the full download path in your script. This can be important if you are working on a shared server such as the LISA cluster where file paths cannot be shared between users.  
+2. 
+
+## Brief
+
+We are going to play around with a dataset provided by fivethirtyeight that has a lot of variables on health and nutrition and some other variables. They used this dataset to demonstrate the danfgerts of p-hacking. 
+
+[download the data here](https://data.fivethirtyeight.com/)
+
+The data set is called nutrition-studies, from Jan 6 2016. Click the blue arrow to download it. Save it  
+
+
+```{r}
+
+
+
+```
+
+
+# Task 2
+
+# Task 3
+
+
+
+# Analysis block
+
+```{r  install packages}
+
+#install.packages("rmdformats") # package with some great r notebook themes to play around with. Im testing some out.
+
+```
+
+
+
