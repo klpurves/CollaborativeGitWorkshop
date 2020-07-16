@@ -44,7 +44,7 @@ The data set is called nutrition-studies, from Jan 6 2016. Click the blue arrow 
 
 ```
 
-we dont have to set upstream!!!!
+I dont want this here anymore, but i do wanna demosntrate the changes I made. This should show both an insertion and deletion.
 
 # Task 2
 
