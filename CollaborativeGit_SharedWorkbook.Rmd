@@ -26,8 +26,9 @@ Given cloning a repository initialises the folder as a git on your local machine
 
 ## Objectives 
 
-1. Learn how to read data in to r studio in a way that doesn't reveal the full download path in your script. This can be important if you are working on a shared server such as the LISA cluster where file paths cannot be shared between users.  
-2. 
+1. Learn how to read data in to r studio in a way that doesn't reveal the full download path in your script. This can be important if you are working on a shared server such as the LISA cluster where file paths cannot be shared between users. 
+
+2. check the dimensions of the dataset
 
 ## Brief
 
