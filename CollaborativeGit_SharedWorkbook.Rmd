@@ -44,7 +44,7 @@ The data set is called nutrition-studies, from Jan 6 2016. Click the blue arrow 
 
 ```
 
-actaully we do!!!
+we dont have to set upstream!
 
 # Task 2
 
