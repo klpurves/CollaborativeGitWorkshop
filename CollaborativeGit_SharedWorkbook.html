@@ -1009,12 +1009,14 @@ $(document).ready(function () {
       <nav class="col-xs-3 menu">
         <div id="toc">
         <ul>
+        <li><a href="#set-up">Set up</a></li>
         <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#important-points-to-come-back-to">Important points to come back to</a></li>
         <li><a href="#aims">Aims</a></li>
         <li><a href="#task-1">Task 1</a></li>
         <li><a href="#task-2">Task 2</a></li>
         <li><a href="#task-3">Task 3</a></li>
-        <li><a href="#analysis-block">Analysis block</a></li>
+        <li><a href="#task-4">Task 4</a></li>
         </ul>
         </div>
         
@@ -1027,18 +1029,75 @@ $(document).ready(function () {
 
 
 
+<div id="set-up" class="section level1">
+<h1>Set up</h1>
+<p>install any packges that you might need</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#install.packages(&quot;rmdformats&quot;, &quot;tidyverse&quot;) # package with some great r notebook themes to play around with. Im testing some out.</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.3.0     ✔ purrr   0.3.2
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.5
+## ✔ tidyr   1.0.2     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;stringr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;forcats&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>This is an r notebook that goes along with a short workshop to get you working confidently and collaboratively using GitHub and local git repositories to ensure 1) version control and 2) regular code review.</p>
 <p>You’ll notice that this notebook has started off pretty empty and unimpressive. By the end of the workshop, we should have a nice completed project that we have built as a team, and we can confidently deploy in public.</p>
 </div>
+<div id="important-points-to-come-back-to" class="section level1">
+<h1>Important points to come back to</h1>
+<p>A lot of these might not make sense at first, but I think it is useful to have them up front and here for reference.</p>
+<div id="never-work-on-the-default-master-branch" class="section level3">
+<h3>Never work on the default (master) branch</h3>
+<p>The default (or master) should be code that is safe, reviewed and you’re sure about. When youre adding new work, especially when many people might be doing things simultaneously, you might accidentally break someone elses code if you work directly on the default.</p>
+</div>
+<div id="start-your-session-with-the-most-up-to-date-default-branch" class="section level3">
+<h3>Start your session with the most up-to-date default branch</h3>
+<p>If you’re going to work on a collaborative project, start your session by pulling the master branch. This will ensure that your days work starts with the most up to date version of the code.</p>
+</div>
+<div id="commit-often-push-when-your-branch-is-ready-to-merge" class="section level3">
+<h3>Commit often, push when your branch is ready to merge</h3>
+<p>A commit message makes it really clear what you have just done. So be sure to commit after every change or piece of work with a verbose message. When you push the code, you can start the process of raising a pull request and review, so it is usually best to do this when your project or piece of the project is ready to be reviewed.</p>
+</div>
+<div id="do-small-pieces-of-work-at-a-time-on-a-branch-then-merge-back-to-master" class="section level3">
+<h3>Do small pieces of work at a time, on a branch, then merge back to master</h3>
+<p>By this I mean try and make each branch a piece of work that fits well together, but is not huge. For example, creating the sumamry scores for the scales you are using in a porject might be done on one branch. Visualising the means of the summary scores would be another.</p>
+</div>
+</div>
 <div id="aims" class="section level1">
 <h1>Aims</h1>
-<p>By the end of the session, I hope that everyone in the room will have a github account, and some experience cloning existing repositories and working on documents collaboratively.</p>
+<p>By the end of the session, I hope that everyone in the room will have a github account, and some experience cloning existing repositories, working on documents collaboratively and reviewing each others code.</p>
 <div id="clone-a-project-repository-and-link-it-with-a-remote" class="section level2">
 <h2>1. Clone a project repository and link it with a remote</h2>
 <p>You should have started the workshop by cloning the remote (i.e. hosted on GitHub) repository that contains this code, and setting it up as a local git (i.e. saved on your personal machine or workspace).</p>
 <p>Given cloning a repository initialises the folder as a git on your local machine,if you’re reading this, you’ve already achieved aim 1. Congratulations. I hope that this fills you with determination.</p>
+</div>
+<div id="run-existing-code-and-write-your-own-on-a-new-git-branch" class="section level2">
+<h2>2. Run existing code and write your own on a new git branch</h2>
+<p>You should be able to run code you access from the remote on your local machine, and successfully add to it.</p>
+</div>
+<div id="push-your-new-code-to-the-remote-git-and-create-a-pull-request" class="section level2">
+<h2>3. Push your new code to the remote git, and create a pull request</h2>
+<p>After adding code to this notebook, you will push it to GitHub and create a pull request to merge your new branch to the default branch.</p>
+</div>
+<div id="review-and-approve-someone-elses-code-and-merge-it-to-the-default-branch" class="section level2">
+<h2>4. Review and approve someone elses code, and merge it to the default branch</h2>
+<p>You should be able to use GitHub to identify a new pull request, review the code chunk, approve it and merge it to the default branch.</p>
+</div>
+<div id="identify-and-deal-with-a-merge-conflict" class="section level2">
+<h2>5. Identify and deal with a merge conflict</h2>
+<p>You should be able to identify and resolve a merge conflict, that results when the master branch changes while you are working on a branch.</p>
 </div>
 </div>
 <div id="task-1" class="section level1">
@@ -1048,25 +1107,198 @@ $(document).ready(function () {
 <ol style="list-style-type: decimal">
 <li>Learn how to read data in to r studio in a way that doesn’t reveal the full download path in your script. This can be important if you are working on a shared server such as the LISA cluster where file paths cannot be shared between users.<br />
 </li>
-<li></li>
+<li>Run code that you have cloned from an existing repository on your local machine.</li>
 </ol>
 </div>
 <div id="brief" class="section level2">
 <h2>Brief</h2>
-<p>We are going to play around with a dataset provided by fivethirtyeight that has a lot of variables on health and nutrition and some other variables. They used this dataset to demonstrate the danfgerts of p-hacking.</p>
+<p>We are going to play around with a dataset provided by fivethirtyeight that has a lot of variables on health and nutrition and some other variables. They used this dataset to demonstrate the dangers of p-hacking. We’ll use it because it has lots of variables in it so lots of room for people to play around with code without conflict.</p>
+</div>
+<div id="activity-1" class="section level2">
+<h2>Activity 1</h2>
+<div id="the-data-set-is-called-nutrition-studies-from-jan-6-2016." class="section level3">
+<h3>1. The data set is called nutrition-studies, from Jan 6 2016.</h3>
 <p><a href="https://data.fivethirtyeight.com/">download the data here</a></p>
-<p>The data set is called nutrition-studies, from Jan 6 2016. Click the blue arrow to download it. Save it</p>
+<p>Click the blue arrow to download it. Save it somewhere outside of your git folder, and unzip it.</p>
+</div>
+<div id="open-the-file-called-file_info.r" class="section level3">
+<h3>2. Open the file called “File_info.R”</h3>
+<p>add the path to your new dataset (raw_anonymized_data.csv) , assigning it to the <em>datapath</em> variable.</p>
+</div>
+<div id="run-the-code-chunk-below." class="section level3">
+<h3>3. Run the code chunk below.</h3>
+<p>It will read in all variables assigned in the “File_info.R”, including the path to your data. You should see ‘datapath’ appear as a variable in your environment</p>
+<p><strong>it is best practice to have this file on your local machine, but outside of the git so that it is not uploaded to GitHub or shared publically</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">source</span>(<span class="st">&quot;./File_info.R&quot;</span>)</span></code></pre></div>
+<p><em>Note: there are other ways of ensuring path anonymity. For example, if you are working in an Rstudio project that is synced with git, and your data is in a folder just ouside of the git, you could use a datapath of ../data/dataname and this would also refrain from sharing the whole data path</em></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Read the data in</li>
+</ol>
+<p><em>either use option 1 as described in steps above, or unhash option 2 and ensure the data path is correct</em></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">#option 1: read in path from source file</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="co">#df &lt;- read_csv(datapath)</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="co">#option 2. Refer to folder just outside of project</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>df &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../openData/nutrition-studies/raw_anonymized_data.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   cancer = col_character(),
+##   diabetes = col_character(),
+##   heart_disease = col_character(),
+##   belly = col_character(),
+##   ever_smoked = col_character(),
+##   currently_smoke = col_character(),
+##   smoke_often = col_character(),
+##   smoke_rarely = col_character(),
+##   never_smoked = col_character(),
+##   quit_smoking = col_character(),
+##   left_hand = col_character(),
+##   right_hand = col_character(),
+##   readingMath = col_character(),
+##   mathReading = col_character(),
+##   favCable = col_character(),
+##   unfavCable = col_character(),
+##   neutralCable = col_character(),
+##   noCrash = col_character(),
+##   yesCrash = col_character(),
+##   uhCrash = col_character()
+##   # ... with 6 more columns
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>View some basic details about the data</li>
+</ol>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># check data dimensions</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="kw">dim</span>(df)</span></code></pre></div>
+<pre><code>## [1]   54 1093</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># check data column names (first 50 to keep it manageable)</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="kw">names</span>(df[<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>])</span></code></pre></div>
+<pre><code>##  [1] &quot;ID&quot;                    &quot;cancer&quot;               
+##  [3] &quot;diabetes&quot;              &quot;heart_disease&quot;        
+##  [5] &quot;belly&quot;                 &quot;ever_smoked&quot;          
+##  [7] &quot;currently_smoke&quot;       &quot;smoke_often&quot;          
+##  [9] &quot;smoke_rarely&quot;          &quot;never_smoked&quot;         
+## [11] &quot;quit_smoking&quot;          &quot;left_hand&quot;            
+## [13] &quot;right_hand&quot;            &quot;readingMath&quot;          
+## [15] &quot;mathReading&quot;           &quot;favCable&quot;             
+## [17] &quot;unfavCable&quot;            &quot;neutralCable&quot;         
+## [19] &quot;noCrash&quot;               &quot;yesCrash&quot;             
+## [21] &quot;uhCrash&quot;               &quot;rash&quot;                 
+## [23] &quot;cat&quot;                   &quot;dog&quot;                  
+## [25] &quot;Dems&quot;                  &quot;atheist&quot;              
+## [27] &quot;Jewish&quot;                &quot;BREAKFASTSANDWICHFREQ&quot;
+## [29] &quot;BREAKFASTSANDWICHQUAN&quot; &quot;EGGSFREQ&quot;             
+## [31] &quot;EGGSQUAN&quot;              &quot;YOGURTFREQ&quot;           
+## [33] &quot;YOGURTQUAN&quot;            &quot;COTTAGECHEESEFREQ&quot;    
+## [35] &quot;COTTAGECHEESEQUAN&quot;     &quot;CREAMCHEESEFREQ&quot;      
+## [37] &quot;CREAMCHEESEQUAN&quot;       &quot;SLICEDCHEESEFREQ&quot;     
+## [39] &quot;SLICEDCHEESEQUAN&quot;      &quot;COLDCEREALFREQ&quot;       
+## [41] &quot;COLDCEREALQUAN&quot;        &quot;WHOLEGRAINCEREALFREQ&quot; 
+## [43] &quot;WHOLEGRAINCEREALQUAN&quot;  &quot;GRITSFREQ&quot;            
+## [45] &quot;GRITSQUAN&quot;             &quot;MILKONCEREALFREQ&quot;     
+## [47] &quot;MILKONCEREALQUAN&quot;      &quot;BROWNRICEFREQ&quot;        
+## [49] &quot;BROWNRICEQUAN&quot;         &quot;WHITERICEFREQ&quot;</code></pre>
+</div>
 </div>
 </div>
 <div id="task-2" class="section level1">
 <h1>Task 2</h1>
+<div id="objectives-1" class="section level2">
+<h2>Objectives</h2>
+<ol style="list-style-type: decimal">
+<li>Create a new branch to work on<br />
+</li>
+<li>Write new code and commit it</li>
+</ol>
+</div>
+<div id="brief-1" class="section level2">
+<h2>Brief</h2>
+<p>In this task, you will use the terminal to checkout a new branch, and add some small piece of code to this notebook. You will commit this code with a verbose commit message.</p>
+</div>
+<div id="activity-2" class="section level2">
+<h2>Activity 2</h2>
+<div id="in-your-terminal-create-and-switch-to-a-new-branch-by-using-the-following-command-git-checkout--b" class="section level3">
+<h3>1. In your terminal, create and switch to a new branch by using the following command: <strong>git checkout -b <branchname></strong></h3>
+<p>Make sure your branch name is something distinctive, memorable and relavant for your task. Do not use spaces. An example might be “workshop_kirstin”.</p>
+<p>You do not want to name branches something generic, like “test” or “analysis” because you will run the risk of using the same branch name as someone else.</p>
+</div>
+<div id="in-this-notebook-add-a-chunk-of-code" class="section level3">
+<h3>2. In this notebook, add a chunk of code</h3>
+<p>It can be anything, but keep it simple and short. I suggest descriptive statistics for a variable of your choice, or cross tabs or correlation between two variables.</p>
+<p>Name your chunk something distinctive ( e.g. <code>{r kirstin&#39;s first code chunk}</code>) and save your notebook.</p>
+</div>
+<div id="stage-and-commit-your-code" class="section level3">
+<h3>3. Stage and commit your code</h3>
+<p>You now want to add your new changes to staging using the command <strong>git add .</strong> in your terminal</p>
+<p>You then want to commit these changes to the local repository. Make sure you include a sensible commit message. The code for this is <strong>git commit -m “your commit message describing what youve done”</strong> and should again be used in the terminal.</p>
+<p>Make sure that you have navigated to the local git repository in your terminal before running any of this.</p>
+</div>
+</div>
 </div>
 <div id="task-3" class="section level1">
 <h1>Task 3</h1>
+<div id="objectives-2" class="section level2">
+<h2>Objectives</h2>
+<ol style="list-style-type: decimal">
+<li>Push your code to the remote repository<br />
+</li>
+<li>Create a pull request for your branch</li>
+</ol>
 </div>
-<div id="analysis-block" class="section level1">
-<h1>Analysis block</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#install.packages(&quot;rmdformats&quot;) # package with some great r notebook themes to play around with. Im testing some out.</span></span></code></pre></div>
+<div id="brief-2" class="section level2">
+<h2>Brief</h2>
+<p>This stage is key for collaborative work. You are now going to push the work you have done on your branch to the remote repository hosted on GitHub and create a pull request.</p>
+<p>A pull request is a signal to repository contributors that you think your code is ready to add to the default branch. It starts the process of code review and merging that is key to clear and reproducible code.</p>
+</div>
+<div id="activities" class="section level2">
+<h2>Activities</h2>
+<div id="push-your-committed-code-to-the-remote-repository" class="section level3">
+<h3>1. Push your committed code to the remote repository</h3>
+<p>The first step to pushing code from a new branch is to set the upstream repository / branch. You do this by telling git what the remote (“upstream”) location is with the following command run in your terminal: <strong>git –set-upstream <a href="https://github.com/klpurves/CollaborativeGitWorkshop.git" class="uri">https://github.com/klpurves/CollaborativeGitWorkshop.git</a> <branchname></strong></p>
+<p>Note that you need to use the branch name you created in task two at the end of this command.</p>
+<p>If you weren’t quite done, and needed to write more code and commit / push it before you go on to raise a pull request to finally merge the finished task, you could simply use <strong>“git push”</strong> on the command line for this step on this branch in the future.</p>
+<p><strong>Optional exercise</strong><br />
+Add a second chunk of code on this branch, again give it a distinctive name. Stage (add), commit and push it before moving on to step 2.</p>
+</div>
+<div id="raise-a-pull-request-on-github" class="section level3">
+<h3>2. Raise a pull request on github</h3>
+<p>Navigate to the repository on GitHub and raise a pull request. You might find slides 15-17 <a href="https://docs.google.com/presentation/d/1v7zAdM7LgGWwgDtM3EVFMJd0AcKYqWYkXCJaB4AU-K4/edit?usp=sharing">of this presentation</a> a helpful reference for how to do this.</p>
+<p>Be sure to explain what your code is meant to do, and any particular things you might want someone to check in the pull request message.</p>
+<p>Assign a reviewer to your pull request (see workshop slides).</p>
+</div>
+</div>
+</div>
+<div id="task-4" class="section level1">
+<h1>Task 4</h1>
+<div id="objectives-3" class="section level2">
+<h2>Objectives</h2>
+<ol style="list-style-type: decimal">
+<li>Identify open pull requests and review code</li>
+<li>Merge and delete branches</li>
+</ol>
+</div>
+<div id="brief-3" class="section level2">
+<h2>Brief</h2>
+<p>This next task will all be done on GitHub. This stage of the process is crucial to checking and safely merging code, even if it may have been written simultaneously with a similar purpose on the same document.</p>
+<p>In this activity, you will identify open pull requests, complete a review, merge the successful code and delete the working branck.</p>
+</div>
+<div id="activites" class="section level2">
+<h2>Activites</h2>
+<div id="identify-an-open-pull-request" class="section level3">
+<h3>1. Identify an open pull request</h3>
+</div>
+<div id="view-code-make-comments-and-approve-it" class="section level3">
+<h3>2. View code, make comments and approve it</h3>
+</div>
+<div id="merge-the-new-branch-to-the-default" class="section level3">
+<h3>3. Merge the new branch to the default</h3>
+</div>
+<div id="delete-the-approved-and-merged-branch" class="section level3">
+<h3>4. Delete the approved and merged branch</h3>
+</div>
+</div>
 </div>
 
     </div>
