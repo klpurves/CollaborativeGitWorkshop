@@ -176,7 +176,6 @@ this will tell you how many dog owners are left handed
 this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
 
 
-
 ```{r alicia workshop code}
 
 table(df$dog, df$cat)
@@ -208,7 +207,7 @@ A pull request is a signal to repository contributors that you think your code i
 
 ### 1.  Push your committed code to the remote repository
 
-The first step to pushing code from a new branch is to set the upstream repository / branch. You do this by telling git what the remote ("upstream") location is with the following command run in your terminal: **git --set-upstream https://github.com/klpurves/CollaborativeGitWorkshop.git <branchname>** 
+The first step to pushing code from a new branch is to set the upstream repository / branch. You do this by telling git what the remote ("upstream") location is with the following command run in your terminal: **git --set-upstream https://github.com/klpurves/CollaborativeGitWorkshop.git branchname** 
 
 Note that you need to use the branch name you created in task two at the end of this command.
 
