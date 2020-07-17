@@ -77,6 +77,7 @@ You should be able to identify and resolve a merge conflict, that results when t
 1. Learn how to read data in to r studio in a way that doesn't reveal the full download path in your script. This can be important if you are working on a shared server such as the LISA cluster where file paths cannot be shared between users.  
 2. Run code that you have cloned from an existing repository on your local machine. 
 
+
 ## Brief
 
 We are going to play around with a dataset provided by fivethirtyeight that has a lot of variables on health and nutrition and some other variables. They used this dataset to demonstrate the dangers of p-hacking. We'll use it because it has lots of variables in it so lots of room for people to play around with code without conflict.
