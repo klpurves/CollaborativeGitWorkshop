@@ -1228,16 +1228,27 @@ $(document).ready(function () {
 <h3>2. In this notebook, add a chunk of code</h3>
 <p>It can be anything, but keep it simple and short. I suggest descriptive statistics for a variable of your choice, or cross tabs or correlation between two variables.</p>
 <p>Name your chunk something distinctive ( e.g. <code>{r kirstin&#39;s first code chunk}</code>) and save your notebook.</p>
-<p>I know not everyone is familiar with r coding, so here are some examples of code you could run by adding it in the grey block below.</p>
+<p>I know not everyone is familiar with r coding, so here are some examples of code you could run by adding it in the grey block below (if you are looking at the .rmd).</p>
 <p>Make sure to name your code chunk something distinctive.</p>
-<p><code>head(df[40:50])</code><br />
-this will show you the first 5 rows of columns 40-50 in the dataframe.</p>
-<p><code>table(df$dog)</code><br />
-this will tell you how many of the people in this sample own a dog</p>
-<p><code>table(df$left_hand,df$dog)</code><br />
-this will tell you how many dog owners are left handed</p>
-<p><code>cor(df$BROCCOLIFREQ,df$PANCAKEFREQ)</code><br />
-this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```</p>
+<pre class="head(df[40:50])```"><code>this will show you the first 5 rows of columns 40-50 in the dataframe.    
+
+```table(df$dog)```     
+this will tell you how many of the people in  this sample own a dog     
+
+```table(df$left_hand,df$dog)```    
+this will tell you how many dog owners are left handed    
+
+```cor(df$BROCCOLIFREQ,df$PANCAKEFREQ)```    
+this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
+
+
+
+```r
+table(df$dog, df$cat)</code></pre>
+<pre><code>##      
+##       No Yes
+##   No  19  16
+##   Yes 15   4</code></pre>
 </div>
 <div id="stage-and-commit-your-code" class="section level3">
 <h3>3. Stage and commit your code</h3>
@@ -1266,7 +1277,7 @@ this will tell you if there is a correlation between ho often the participantd e
 <h2>Activities</h2>
 <div id="push-your-committed-code-to-the-remote-repository" class="section level3">
 <h3>1. Push your committed code to the remote repository</h3>
-<p>The first step to pushing code from a new branch is to set the upstream repository / branch. You do this by telling git what the remote (“upstream”) location is with the following command run in your terminal: <strong>git –set-upstream <a href="https://github.com/klpurves/CollaborativeGitWorkshop.git" class="uri">https://github.com/klpurves/CollaborativeGitWorkshop.git</a> <branchname></strong></p>
+<p>The first step to pushing code from a new branch is to set the upstream repository / branch. You do this by telling git what the remote (“upstream”) location is with the following command run in your terminal: <strong>git –set-upstream <a href="https://github.com/klpurves/CollaborativeGitWorkshop.git" class="uri">https://github.com/klpurves/CollaborativeGitWorkshop.git</a> branchname</strong></p>
 <p>Note that you need to use the branch name you created in task two at the end of this command.</p>
 <p>If you weren’t quite done, and needed to write more code and commit / push it before you go on to raise a pull request to finally merge the finished task, you could simply use <strong>“git push”</strong> on the command line for this step on this branch in the future.</p>
 <p><strong>Optional exercise</strong><br />

@@ -97,7 +97,7 @@ add the path to your new dataset (raw_anonymized_data.csv) , assigning it to the
 ### 3. Run the code chunk below. 
 It will read in all variables assigned in the "File_info.R", including the path to your data. You should see 'datapath' appear as a variable in your environment 
 
-**it is best practice to have this file on your local machine, but outside of the git so that it is not uploaded to GitHub or shared publically**
+**it is best practice to have this file on your local machine, but outside of the git folders so that it is not uploaded to GitHub or shared publically**
 
 ```{r read in source file}
 
@@ -115,10 +115,10 @@ source("./File_info.R")
 
 #option 1: read in path from source file
 
-df <- read_csv(datapath)
+#df <- read_csv(datapath)
 
 #option 2. Refer to folder just outside of project
-#df <- read_csv("../nutrition-studies")
+df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
 
 ```
 
