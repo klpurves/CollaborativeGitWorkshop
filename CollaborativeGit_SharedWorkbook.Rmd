@@ -176,9 +176,9 @@ this will tell you how many dog owners are left handed
 this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
 
 
+```{r meg in and out belly biscuits}
 
-```{r}
-
+df%>%group_by(as.factor(belly))%>%summarise(mean_biscuit = mean(BISCUITQUAN, na.rm=T))
 
 ```
 
