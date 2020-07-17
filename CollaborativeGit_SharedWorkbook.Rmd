@@ -82,7 +82,6 @@ You should be able to identify and resolve a merge conflict, that results when t
 We are going to play around with a dataset provided by fivethirtyeight that has a lot of variables on health and nutrition and some other variables. They used this dataset to demonstrate the dangers of p-hacking. We'll use it because it has lots of variables in it so lots of room for people to play around with code without conflict.
 
 
-
 ## Activity 1
 
 ### 1.  The data set is called nutrition-studies, from Jan 6 2016. 
@@ -131,7 +130,6 @@ dim(df)
 # check data column names (first 50 to keep it manageable)
 names(df[1:50])
 
-
 ```
 
 # Task 2
@@ -158,6 +156,30 @@ You do not want to name branches something generic, like "test" or "analysis" be
 It can be anything, but keep it simple and short. I suggest descriptive statistics for a variable of your choice, or cross tabs or correlation between two variables. 
 
 Name your chunk something distinctive ( e.g. ```{r kirstin's first code chunk}```) and save your notebook.
+
+
+I know not everyone is familiar with r coding, so here are some examples of code you could run by adding it in the grey block below (if you are looking at the .rmd).
+
+Make sure to name your code chunk something distinctive.
+
+```head(df[40:50])```   
+this will show you the first 5 rows of columns 40-50 in the dataframe.    
+
+```table(df$dog)```     
+this will tell you how many of the people in  this sample own a dog     
+
+```table(df$left_hand,df$dog)```    
+this will tell you how many dog owners are left handed    
+
+```cor(df$BROCCOLIFREQ,df$PANCAKEFREQ)```    
+this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
+
+
+
+```{r}
+
+
+```
 
 ### 3. Stage and commit your code
 
