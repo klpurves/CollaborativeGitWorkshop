@@ -1,4 +1,4 @@
 # Assign your downloaded datapath to the variable below
 
-datapath <- "path/to/data"
+datapath <- "/Users/kirstin/Dropbox/SGDP/Teaching/Courses/openData/nutrition-studies 2/raw_anonymized_data.csv"
   
