@@ -118,7 +118,7 @@ source("./File_info.R")
 #df <- read_csv(datapath)
 
 #option 2. Refer to folder just outside of project
-df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
+df <- read_csv("../Data/nutrition-studies/raw_anonymized_data.csv")
 
 ```
 
@@ -177,8 +177,9 @@ this will tell you if there is a correlation between ho often the participantd e
 
 
 
-```{r}
+```{r molly workshop code}
 
+table(df$ever_smoked)
 
 ```
 
