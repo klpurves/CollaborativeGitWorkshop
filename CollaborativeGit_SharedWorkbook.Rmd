@@ -115,10 +115,10 @@ source("./File_info.R")
 
 #option 1: read in path from source file
 
-#df <- read_csv(datapath)
+df <- read_csv(datapath)
 
 #option 2. Refer to folder just outside of project
-df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
+#df <- read_csv("../nutrition-studies")
 
 ```
 
@@ -177,9 +177,9 @@ this will tell you if there is a correlation between ho often the participantd e
 
 
 
-```{r}
+```{r alicia workshop code}
 
-
+table(df$dog, df$cat)
 ```
 
 ### 3. Stage and commit your code
