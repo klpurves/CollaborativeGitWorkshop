@@ -1,2 +1,4 @@
-data <- #put the path to your dataset here
+# Assign your downloaded datapath to the variable below
+
+datapath <- "path/to/data"
   
