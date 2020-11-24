@@ -1,7 +1,7 @@
 # CollaborativeGitWorkshop
 Repository to workshop collaborative workflow on git
 
-The repo contains an Rmarkdwon (.rmd) file, a knitted html version of this markdown, and a .R file called File_info.R.
+The repo contains an Rmarkdown (.rmd) file, a knitted html version of this markdown, and a .R file called File_info.R.
 
 Google slides giving an introduction to the concept of git, commands, and the collaborative workflow here: https://docs.google.com/presentation/d/1v7zAdM7LgGWwgDtM3EVFMJd0AcKYqWYkXCJaB4AU-K4/edit?usp=sharing
 
