@@ -39,15 +39,38 @@ A lot of these might not make sense at first, but I think it is useful to have t
 
 ### Never work on the default (main) branch
 The default (or master) should be code that is safe, reviewed and you're sure about.
-When youre adding new work, especially when many people might be doing things simultaneously, you might accidentally break someone elses code if you work directly on the default.
+When you're adding new work, especially when many people might be doing things simultaneously, you might accidentally break someone elses code if you work directly on the default.
 
-Even if you are working on your own (non-collaboratively) it is worth getting used to working on branches
 
 ### Start your session with the most up-to-date default branch
-If you're going to work on a collaborative project, start your session by pulling the master branch. This will ensure that your days work starts with the most up to date version of the code.
+If you're going to work on a collaborative project, start your session by pulling the master branch.
+This will ensure that your days work starts with the most up to date version of the code.
 
-### Commit often, push when your branch is ready to merge
-A commit message makes it really clear what you have just done. So be sure to commit after every change or piece of work with a verbose message. When you push the code, you can start the process of raising a pull request and review, so it is usually best to do this when your project or piece of the project is ready to be reviewed.
+### Stage (add) frequently, Commit often, push when you're need your work on the remote
+A commit message makes it really clear what you have just done. So be sure to commit after every change or piece of work with a verbose message.
+
+When you push the code, you can start the process of raising a pull request and review, so it is usually best to do this when your project or piece of the project
+is ready to be reviewed. Alternatively, if you want someone to help you, or to look at your branch, you will need to have pushed it first.
+
+An example workflow for a piece of work, say, coding a figure, might be something like this:
+
+1. you start the r script or chunk for the figure and have the basic data read in and write the skeleton for the ggplot, then decide you need some tea. But first...
+
+`bash git add .`
+`bash git commit -m "created ggplot skeleton"`
+
+2. You customise the figure, adding a new colour palette etc.
+
+`bash git add .`
+`bash git commit -m "customised figure parameters"`
+
+3. You finish off the last few tweaks, making sure the figure height and width comes out right. Done and ready to be merged with the main project again
+
+`bash git add .`
+`bash git commit -m "finalised figure"`
+`bash git push`
+
+
 
 ### Do small pieces of work at a time, on a branch, then merge back to master
 By this I mean try and make each branch a piece of work that fits well together, but is not huge. For example, creating the sumamry scores for the scales you are using in a porject might be done on one branch. Visualising the means of the summary scores would be another.
