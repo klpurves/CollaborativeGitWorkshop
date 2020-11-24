@@ -151,7 +151,6 @@ folder structure is not consistent with the repository**
 source("./File_info.R")
 
 ```
-
 *Note: there are other ways of ensuring path anonymity. For example, if you are working in an Rstudio project that is synced with git, and your data is in a folder just ouside of the git, you could use a datapath of ../data/dataname and this would also refrain from sharing the whole data path*
 
 4. Read the data in
@@ -164,7 +163,7 @@ source("./File_info.R")
 
 #df <- read_csv(datapath)
 
-#option 2. Refer to folder just outside of project
+#option 2. Refer to folder just outside of project (easiest if you have consistent file structures across your group)
 df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
 
 ```
@@ -205,7 +204,6 @@ It can be anything, but keep it simple and short. I suggest descriptive statisti
 
 Name your chunk something distinctive ( e.g. ```{r kirstin's first code chunk}```) and save your notebook.
 
-
 I know not everyone is familiar with r coding, so here are some examples of code you could run by adding it in the grey block below (if you are looking at the .rmd).
 
 Make sure to name your code chunk something distinctive.
@@ -235,7 +233,6 @@ You now want to add your new changes to staging using the command **git add .** 
 You then want to commit these changes to the local repository. Make sure you include a sensible commit message. The code for this is **git commit -m "your commit message describing what youve done"** and should again be used in the terminal.
 
 Make sure that you have navigated to the local git repository in your terminal before running any of this.
-
 
 # Task 3
 
