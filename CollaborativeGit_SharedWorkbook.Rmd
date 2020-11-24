@@ -70,11 +70,18 @@ An example workflow for a piece of work, say, coding a figure, might be somethin
 `bash git commit -m "finalised figure"`
 `bash git push`
 
+Go online and raise a pull request.
 
+4. You realise that you had a bug in your code (either before or after someone reviewed). So you fix it...
+
+`bash git add .`
+`bash git commit -m "fixed that bug x y found"`
+`bash git push`
+
+Return to github and ensure pull request has been updated.
 
 ### Do small pieces of work at a time, on a branch, then merge back to master
 By this I mean try and make each branch a piece of work that fits well together, but is not huge. For example, creating the sumamry scores for the scales you are using in a porject might be done on one branch. Visualising the means of the summary scores would be another.
-
 
 # Aims
 
@@ -130,7 +137,14 @@ add the path to your new dataset (raw_anonymized_data.csv) , assigning it to the
 ### 3. Run the code chunk below.
 It will read in all variables assigned in the "File_info.R", including the path to your data. You should see 'datapath' appear as a variable in your environment
 
-**it is best practice to have this file on your local machine, but outside of the git folders so that it is not uploaded to GitHub or shared publically**
+**it is best practice to have this file on your local machine,
+but outside of the git folders so that it is not uploaded to GitHub or shared publically.
+
+The most efficient way of doing this is relational folder paths. So, if data is stored in the directory
+preceding your current one, your file path would be ../data.csv
+
+the file info option we are using here is another alternative if your
+folder structure is not consistent with the repository**
 
 ```{r read in source file}
 
