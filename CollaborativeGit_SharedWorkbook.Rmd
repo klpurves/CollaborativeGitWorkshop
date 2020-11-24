@@ -8,30 +8,40 @@ output: rmdformats::material
 
 # Set up
 
-install any packges that you might need
-```{r  install packages}
+install any packges that you might need. This chunk of code will run automatically the moment you run any chunk
+in the notebook. It will install packages you dont already have, and call installed packages from your library.
 
-#install.packages("rmdformats", "tidyverse") # package with some great r notebook themes to play around with. Im testing some out.
+```{r setup,  install packages}
+
+if(!require(tidyverse)){
+    install.packages("tidyverse")
+    library(tidyverse)
+}
+
+if(!require(rmdformats)){
+    install.packages("rmdformats")
+}
 
 ```
 
-
-```{r Setup}
-library(tidyverse)
-```
 
 # Introduction
 
-This is an r notebook that goes along with a short workshop to get you working confidently and collaboratively using GitHub and local git repositories to ensure 1) version control and 2) regular code review.
+This is an r notebook that goes along with a short workshop to get you working confidently and collaboratively
+using GitHub and local git repositories to ensure 1) version control and 2) regular code review.
 
-You'll notice that this notebook has started off pretty empty and unimpressive. By the end of the workshop, we should have a nice completed project that we have built as a team, and we can confidently deploy in public. 
+You'll notice that this notebook has started off pretty empty and unimpressive. By the end of the workshop,
+we should have a nice completed project that we have built as a team, and we can confidently deploy in public.
 
 # Important points to come back to
 
-A lot of these might not make sense at first, but I think it is useful to have them up front and here for reference. 
+A lot of these might not make sense at first, but I think it is useful to have them up front and here for reference.
 
-### Never work on the default (master) branch
-The default (or master) should be code that is safe, reviewed and you're sure about. When youre adding new work, especially when many people might be doing things simultaneously, you might accidentally break someone elses code if you work directly on the default. 
+### Never work on the default (main) branch
+The default (or master) should be code that is safe, reviewed and you're sure about.
+When youre adding new work, especially when many people might be doing things simultaneously, you might accidentally break someone elses code if you work directly on the default.
+
+Even if you are working on your own (non-collaboratively) it is worth getting used to working on branches
 
 ### Start your session with the most up-to-date default branch
 If you're going to work on a collaborative project, start your session by pulling the master branch. This will ensure that your days work starts with the most up to date version of the code.
@@ -45,13 +55,13 @@ By this I mean try and make each branch a piece of work that fits well together,
 
 # Aims
 
-By the end of the session, I hope that everyone in the room will have a github account, and some experience cloning existing repositories, working on documents collaboratively and reviewing each others code. 
+By the end of the session, I hope that everyone in the room will have a github account, and some experience cloning existing repositories, working on documents collaboratively and reviewing each others code.
 
 ## 1. Clone a project repository and link it with a remote
 
 You should have started the workshop by cloning the remote (i.e. hosted on GitHub) repository that contains this code, and setting it up as a local git (i.e. saved on your personal machine or workspace).
 
-Given cloning a repository initialises the folder as a git on your local machine,if you're reading this, you've already achieved aim 1. Congratulations. I hope that this fills you with determination. 
+Given cloning a repository initialises the folder as a git on your local machine,if you're reading this, you've already achieved aim 1. Congratulations. I hope that this fills you with determination.
 
 ## 2. Run existing code and write your own on a new git branch
 
@@ -67,15 +77,15 @@ You should be able to use GitHub to identify a new pull request, review the code
 
 ## 5. Identify and deal with a merge conflict
 
-You should be able to identify and resolve a merge conflict, that results when the master branch changes while you are working on a branch. 
+You should be able to identify and resolve a merge conflict, that results when the master branch changes while you are working on a branch.
 
 
-# Task 1 
+# Task 1
 
-## Objectives 
+## Objectives
 
-1. Learn how to read data in to r studio in a way that doesn't reveal the full download path in your script. This can be important if you are working on a shared server such as the LISA cluster where file paths cannot be shared between users.  
-2. Run code that you have cloned from an existing repository on your local machine. 
+1. Learn how to read data in to r studio in a way that doesn't reveal the full download path in your script. This can be important if you are working on a shared server such as the LISA cluster where file paths cannot be shared between users.
+2. Run code that you have cloned from an existing repository on your local machine.
 
 
 ## Brief
@@ -85,17 +95,17 @@ We are going to play around with a dataset provided by fivethirtyeight that has 
 
 ## Activity 1
 
-### 1.  The data set is called nutrition-studies, from Jan 6 2016. 
+### 1.  The data set is called nutrition-studies, from Jan 6 2016.
 
 [download the data here](https://data.fivethirtyeight.com/)
 
-Click the blue arrow to download it. Save it somewhere outside of your git folder, and unzip it.     
+Click the blue arrow to download it. Save it somewhere outside of your git folder, and unzip it.
 
 ### 2.  Open the file called "File_info.R"
 add the path to your new dataset (raw_anonymized_data.csv) , assigning it to the *datapath* variable.
 
-### 3. Run the code chunk below. 
-It will read in all variables assigned in the "File_info.R", including the path to your data. You should see 'datapath' appear as a variable in your environment 
+### 3. Run the code chunk below.
+It will read in all variables assigned in the "File_info.R", including the path to your data. You should see 'datapath' appear as a variable in your environment
 
 **it is best practice to have this file on your local machine, but outside of the git folders so that it is not uploaded to GitHub or shared publically**
 
@@ -137,10 +147,10 @@ names(df[1:50])
 
 ## Objectives
 
-1.  Create a new branch to work on   
-2.  Write new code and commit it   
+1.  Create a new branch to work on
+2.  Write new code and commit it
 
-## Brief 
+## Brief
 
 In this task, you will use the terminal to checkout a new branch, and add some small piece of code to this notebook. You will commit this code with a verbose commit message.
 
@@ -154,7 +164,7 @@ You do not want to name branches something generic, like "test" or "analysis" be
 
 ### 2.  In this notebook, add a chunk of code
 
-It can be anything, but keep it simple and short. I suggest descriptive statistics for a variable of your choice, or cross tabs or correlation between two variables. 
+It can be anything, but keep it simple and short. I suggest descriptive statistics for a variable of your choice, or cross tabs or correlation between two variables.
 
 Name your chunk something distinctive ( e.g. ```{r kirstin's first code chunk}```) and save your notebook.
 
@@ -163,16 +173,16 @@ I know not everyone is familiar with r coding, so here are some examples of code
 
 Make sure to name your code chunk something distinctive.
 
-```head(df[40:50])```   
-this will show you the first 5 rows of columns 40-50 in the dataframe.    
+```head(df[40:50])```
+this will show you the first 5 rows of columns 40-50 in the dataframe.
 
-```table(df$dog)```     
-this will tell you how many of the people in  this sample own a dog     
+```table(df$dog)```
+this will tell you how many of the people in  this sample own a dog
 
-```table(df$left_hand,df$dog)```    
-this will tell you how many dog owners are left handed    
+```table(df$left_hand,df$dog)```
+this will tell you how many dog owners are left handed
 
-```cor(df$BROCCOLIFREQ,df$PANCAKEFREQ)```    
+```cor(df$BROCCOLIFREQ,df$PANCAKEFREQ)```
 this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
 
 
@@ -185,21 +195,21 @@ table(df$dog, df$cat)
 
 You now want to add your new changes to staging using the command **git add .** in your terminal
 
-You then want to commit these changes to the local repository. Make sure you include a sensible commit message. The code for this is **git commit -m "your commit message describing what youve done"** and should again be used in the terminal. 
+You then want to commit these changes to the local repository. Make sure you include a sensible commit message. The code for this is **git commit -m "your commit message describing what youve done"** and should again be used in the terminal.
 
-Make sure that you have navigated to the local git repository in your terminal before running any of this. 
+Make sure that you have navigated to the local git repository in your terminal before running any of this.
 
 
 # Task 3
 
 ## Objectives
 
-1.  Push your code to the remote repository   
+1.  Push your code to the remote repository
 2.  Create a pull request for your branch
 
 ## Brief
 
-This stage is key for collaborative work. You are now going to push the work you have done on your branch to the remote repository hosted on GitHub and create a pull request. 
+This stage is key for collaborative work. You are now going to push the work you have done on your branch to the remote repository hosted on GitHub and create a pull request.
 
 A pull request is a signal to repository contributors that you think your code is ready to add to the default branch. It starts the process of code review and merging that is key to clear and reproducible code.
 
@@ -207,20 +217,20 @@ A pull request is a signal to repository contributors that you think your code i
 
 ### 1.  Push your committed code to the remote repository
 
-The first step to pushing code from a new branch is to set the upstream repository / branch. You do this by telling git what the remote ("upstream") location is with the following command run in your terminal: **git --set-upstream https://github.com/klpurves/CollaborativeGitWorkshop.git branchname** 
+The first step to pushing code from a new branch is to set the upstream repository / branch. You do this by telling git what the remote ("upstream") location is with the following command run in your terminal: **git --set-upstream https://github.com/klpurves/CollaborativeGitWorkshop.git branchname**
 
 Note that you need to use the branch name you created in task two at the end of this command.
 
-If you weren't quite done, and needed to write more code and commit / push it before you go on to raise a pull request to finally merge the finished task, you could simply use **"git push"** on the command line for this step on this branch in the future. 
+If you weren't quite done, and needed to write more code and commit / push it before you go on to raise a pull request to finally merge the finished task, you could simply use **"git push"** on the command line for this step on this branch in the future.
 
-**Optional exercise**  
+**Optional exercise**
 Add a second chunk of code on this branch, again give it a distinctive name. Stage (add), commit and push it before moving on to step 2.
 
 ### 2. Raise a pull request on github
 
 Navigate to the repository on GitHub and raise a pull request. You might find slides 15-17 [of this presentation](https://docs.google.com/presentation/d/1v7zAdM7LgGWwgDtM3EVFMJd0AcKYqWYkXCJaB4AU-K4/edit?usp=sharing) a helpful reference for how to do this.
 
-Be sure to explain what your code is meant to do, and any particular things you might want someone to check in the pull request message. 
+Be sure to explain what your code is meant to do, and any particular things you might want someone to check in the pull request message.
 
 Assign a reviewer to your pull request (see workshop slides).
 
@@ -233,20 +243,16 @@ Assign a reviewer to your pull request (see workshop slides).
 
 ## Brief
 
-This next task will all be done on GitHub. This stage of the process is crucial to checking and safely merging code, even if it may have been written simultaneously with a similar purpose on the same document. 
+This next task will all be done on GitHub. This stage of the process is crucial to checking and safely merging code, even if it may have been written simultaneously with a similar purpose on the same document.
 
-In this activity, you will identify open pull requests, complete a review, merge the successful code and delete the working branck. 
+In this activity, you will identify open pull requests, complete a review, merge the successful code and delete the working branck.
 
 ## Activites
 
-### 1.  Identify an open pull request 
+### 1.  Identify an open pull request
 
 ### 2.  View code, make comments and approve it
 
 ### 3.  Merge the new branch to the default
 
 ### 4.  Delete the approved and merged branch
-
-
-
-
