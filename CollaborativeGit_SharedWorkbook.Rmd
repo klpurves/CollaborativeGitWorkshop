@@ -164,7 +164,7 @@ source("./File_info.R")
 #df <- read_csv(datapath)
 
 #option 2. Refer to folder just outside of project (easiest if you have consistent file structures across your group)
-df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
+df <- read_csv("../nutrition-studies/raw_anonymized_data.csv")
 
 ```
 
@@ -221,10 +221,12 @@ this will tell you how many dog owners are left handed
 this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
 
 
-```{r alicia workshop code}
+```{r Steve workshop code}
 
-table(df$dog, df$cat)
+table(df$cancer, df$diabetes)
+
 ```
+
 
 ### 3. Stage and commit your code
 
