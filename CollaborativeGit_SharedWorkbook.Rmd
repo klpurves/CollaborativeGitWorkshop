@@ -161,10 +161,10 @@ source("./File_info.R")
 
 #option 1: read in path from source file
 
-#df <- read_csv(datapath)
+df <- read_csv(datapath)
 
-#option 2. Refer to folder just outside of project (easiest if you have consistent file structures across your group)
-df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
+# option 2. Refer to folder just outside of project (easiest if you have consistent file structures across your group)
+# df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
 
 ```
 
@@ -219,6 +219,10 @@ this will tell you how many dog owners are left handed
 
 ```cor(df$BROCCOLIFREQ,df$PANCAKEFREQ)```
 this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
+
+```{r katie funky chunk}
+
+```
 
 
 ```{r alicia workshop code}
