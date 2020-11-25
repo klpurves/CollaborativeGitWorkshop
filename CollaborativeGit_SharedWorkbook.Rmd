@@ -226,6 +226,11 @@ this will tell you if there is a correlation between ho often the participantd e
 table(df$dog, df$cat)
 ```
 
+```{r laura workshop code}
+table(df$heart_disease)
+
+```
+
 ### 3. Stage and commit your code
 
 You now want to add your new changes to staging using the command **git add .** in your terminal
