@@ -223,7 +223,7 @@ this will tell you if there is a correlation between ho often the participantd e
 
 ```{r Steve workshop code}
 
-table(df$cancer, df$diabetes)
+table(df$dog, df$diabetes)
 
 ```
 
