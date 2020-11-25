@@ -161,10 +161,10 @@ source("./File_info.R")
 
 #option 1: read in path from source file
 
-#df <- read_csv(datapath)
+df <- read_csv(datapath)
 
 #option 2. Refer to folder just outside of project (easiest if you have consistent file structures across your group)
-df <- read_csv("../openData/nutrition-studies/raw_anonymized_data.csv")
+df <- read_csv("../nutrition-studies/raw_anonymized_data.csv")
 
 ```
 
@@ -206,6 +206,8 @@ Name your chunk something distinctive ( e.g. ```{r kirstin's first code chunk}``
 
 I know not everyone is familiar with r coding, so here are some examples of code you could run by adding it in the grey block below (if you are looking at the .rmd).
 
+
+ 
 Make sure to name your code chunk something distinctive.
 
 ```head(df[40:50])```
@@ -221,10 +223,11 @@ this will tell you how many dog owners are left handed
 this will tell you if there is a correlation between ho often the participantd eat broccoli and how often they eat pancakes.```
 
 
-```{r alicia workshop code}
+```{r Elham's first code chunk}```
 
-table(df$dog, df$cat)
-```
+ ```cor(df$BROCCOLIFREQ,df$PANCAKEFREQ)```
+
+
 
 ### 3. Stage and commit your code
 
