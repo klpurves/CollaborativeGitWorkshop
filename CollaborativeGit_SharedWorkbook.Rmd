@@ -231,7 +231,7 @@ plot(df$SLICEDCHEESEFREQ, df$WHOLEGRAINCRACKERSFREQ)
 ```
 
 
-### 3. Stage and commit your code
+### 3. Stage and commit your code d
 
 You now want to add your new changes to staging using the command **git add .** in your terminal
 
